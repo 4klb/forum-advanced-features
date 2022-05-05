@@ -1,0 +1,292 @@
+body {
+    background-color: rgb(226, 229, 229);
+}
+
+.btn_container {
+    background-color: rgb(65, 77, 83);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.container_chosenc {
+    font-family: 'Lobster', cursive; 
+    width: 700px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.container {
+    font-family: 'Lobster', cursive; 
+    width: 700px;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.chosenc {
+    margin-left: 50px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 15px;
+    color: rgb(134, 132, 132);
+}
+
+.author {
+    margin-left: 50px;
+    font-size: 16px;
+    color: rgb(168, 166, 166);
+}
+
+.title_ref {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 50px;
+    font-size: 24px;
+    color: rgb(134, 132, 132);
+    cursor: pointer;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.title_ref:hover {
+    color:rgb(190, 141, 106);
+}
+
+.title_ref:hover:after {
+    display: block;
+    opacity: 1;
+}
+
+.tags_ref {
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    color:rgb(27, 22, 18);
+    border: 0px solid #fff;
+    height: 34px;
+    width: 80px;
+    font-size: 16px;
+    color: rgb(168, 166, 166);
+}
+
+.tags_ref:hover {
+    color: rgb(105, 101, 101);
+}
+
+.tags_btn {
+    border: 0px solid #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tags_btn:hover {
+    color:rgb(190, 141, 106);
+}
+
+.tags_btn:hover:after {
+    display: block;
+    opacity: 1;
+}
+
+.text {
+    margin-left: 50px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    background-color: white;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn_ref {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.btn_ref:hover {
+    color:rgb(190, 141, 106);
+}
+
+.btn_ref:hover:after {
+    display: block;
+    opacity: 1;
+}
+
+
+@media (max-width: 1099px) {/*font 15*/
+    .btn_container {
+        font-size: 15px;
+        background-color: rgb(65, 77, 83);
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #ccc;
+    }
+    
+    .container_chosenc {
+        font-family: 'Lobster', cursive; 
+        width: 600px;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+    
+    .container {
+        font-family: 'Lobster', cursive; 
+        width: 600px;
+        font-size: 15px;
+        margin: 0 auto;
+    }
+    
+    .chosenc {
+        margin-left: 50px;
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        font-size: 15px;
+        color: rgb(134, 132, 132);
+    }
+    
+    .author {
+        margin-left: 50px;
+        font-size: 15px;
+        color: rgb(168, 166, 166);
+    }
+    
+    .title_ref {
+        font-family: 'Montserrat', sans-serif;
+        margin-left: 50px;
+        font-size: 15px;
+        color: rgb(134, 132, 132);
+        cursor: pointer;
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+    }
+    
+    .tags_ref {
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.3);
+        color:rgb(27, 22, 18);
+        border: 0px solid #fff;
+        height: 34px;
+        width: 80px;
+        font-size: 15px;
+        color: rgb(168, 166, 166);
+    }
+
+    
+    .tags_btn {
+        font-size: 15px;
+        border: 0px solid #fff;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    
+    .text {
+        margin-left: 50px;
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 15px;
+    }
+    
+    .btn_ref {
+        font-size: 15px;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 900px) { /*font 10*/
+    .btn_container {
+        font-size: 10px;
+        background-color: rgb(65, 77, 83);
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #ccc;
+    }
+    
+    .container_chosenc {
+        font-family: 'Lobster', cursive; 
+        width: 400px;
+        font-size: 10px;
+        margin: 0 auto;
+    }
+    
+    .container {
+        font-family: 'Lobster', cursive; 
+        width: 400px;
+        font-size: 10px;
+        margin: 0 auto;
+    }
+    
+    .chosenc {
+        margin-left: 50px;
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        font-size: 10px;
+        color: rgb(134, 132, 132);
+    }
+    
+    .author {
+        margin-left: 50px;
+        font-size: 10px;
+        color: rgb(168, 166, 166);
+    }
+    
+    .title_ref {
+        font-family: 'Montserrat', sans-serif;
+        margin-left: 50px;
+        font-size: 10px;
+        color: rgb(134, 132, 132);
+        cursor: pointer;
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+    }
+    
+    .tags_ref {
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.3);
+        color:rgb(27, 22, 18);
+        border: 0px solid #fff;
+        height: 34px;
+        width: 80px;
+        font-size: 10px;
+        color: rgb(168, 166, 166);
+    }
+
+    
+    .tags_btn {
+        font-size: 10px;
+        border: 0px solid #fff;
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    
+    .text {
+        margin-left: 50px;
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 10px;
+    }
+    
+    .btn_ref {
+        font-size: 10px;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+}

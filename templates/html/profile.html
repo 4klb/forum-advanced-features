@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>Profile</title>
+</head>
+<body>
+    <div class="btn_container">  
+        <a class="btn_ref" onClick='location.href="http://localhost:8080/"'>Home</a>
+    </div>
+    <div class="container">
+    <div class="uname">User name: {{ .User.Name }}</div>
+    <br>
+    <div class="cpost">My created posts: 
+        <div class="list">
+            {{ range .CreatedPosts }}
+            <a onClick='location.href="http://localhost:8080/post/{{.ID}}"'>
+                <div class="ref">{{.Title}}</div>  
+            </a>
+            <br>
+            {{ end }}
+        </div>
+    </div>
+    <br>
+    <div class="lpost">My liked posts:
+        <div class="list">
+            {{ range .LikedPosts }}
+            <a class="ref" onClick='location.href="http://localhost:8080/post/{{.ID}}"'>
+                <div class="ref">{{.Title}}</div>
+            </a>
+            <br>
+            {{ end }}
+        </div>
+    </div>
+    <br>
+    <div class="lpost">My disliked posts:
+        <div class="list">
+            {{ range .DislikedPosts }}
+            <a class="ref" onClick='location.href="http://localhost:8080/post/{{.ID}}"'>
+                <div class="ref">{{.Title}}</div>
+            </a>
+            <br>
+            {{ end }}
+        </div>
+    </div>
+    <br>
+    {{ if eq .IsNotification true }}
+    <div class="lpost">Notifications:
+        <div class="notify_list">
+            {{ range .Notifications }}
+            {{ if .Title }}
+            Your post '{{ .Title }}' was raited by {{ .LikerName }}
+            {{ end }}
+
+            {{ if .Comment }} 
+            User '{{ .CommentatorName }}' left the comment <br> "{{ .Comment }}" <br> on your post '{{ .CommentedPost }}'
+            {{ end }}
+            <hr>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+</body>
+</html>

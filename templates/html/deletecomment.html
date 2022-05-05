@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/assets/css/chosenpost.css">
+    <link rel="shortcut icon" href="#">
+    <title>Delete comment</title>
+</head>
+<body>
+    <div class="btn_container">
+        <a class="btn_ref" onClick='location.href="http://localhost:8080"'>Home</a>
+        </div>
+        <div class="container">
+            <div class="title">Comment: {{ .Text }}</div>
+            <br>
+        <form action="confirmdeletecomment" method="POST">
+            <div class="edit_delete">
+                <button class="btn_edit_delete" type="submit" name="confirm" value="{{.ID}}">Delete</button>
+                <button class="btn_edit_delete" type="submit" name="back" value="{{.ID}}">Back</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

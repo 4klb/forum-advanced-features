@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/assets/css/createpost.css">
+    <title>Edit comment</title>
+</head>
+<body>
+        <div class="title">Edit comment</div>
+        <form action="confirmeditcomment" method="POST">
+            {{ range .Comments }}
+            <div class="container">
+                <label for="description"><b>Text</b></label>
+                <textarea class="input_data" type="text" name="description" value="{{.Text}}">{{ .Text }}</textarea>
+                <div class="btn_container" style="background-color:#f1f1f1">
+                    <button class="btn" type="submit" name="confirm" value="{{.ID}}">Edit</button>
+                    <button class="btn" type="submit" name="back" value="{{.ID}}">Back</button>
+                    <input class="btn" type="button" value="Home" onClick='location.href="http://localhost:8080/"'>
+                </div>
+            {{ end }}
+            <br>
+            <div class="text">
+                {{ if eq .ErrorVal.Err true }}
+                {{ .ErrorVal.MSG }}
+                <div class="btn_container" style="background-color:#f1f1f1">
+                   <button class="btn" type="submit" name="back" value="{{ .PostId }}">Back</button>
+                   <input class="btn" type="button" value="Home" onClick='location.href="http://localhost:8080/"'>
+                </div>
+            </div>
+                {{ end }}   
+            </div>   
+    </form>
+    </body>
+</html>

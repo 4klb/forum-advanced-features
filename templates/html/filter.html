@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/assets/css/filter.css">
+    <link rel="shortcut icon" href="#">
+    <title>Filter</title>
+</head>
+<body>
+    <div class="btn_container">
+        {{ if eq .InSession  false }}
+        <div class="header">
+            <a class="btn_ref" onClick='location.href="http://localhost:8080/registration"'>Sign up</a>
+            <a class="btn_ref" onClick='location.href="http://localhost:8080/login"'>Sign in</a>
+            <a class="btn_ref" onClick='location.href="http://localhost:8080/"'>Home</a>
+        </div>
+        {{else}}
+        <div class="header">
+            <a class="btn_ref" onClick='location.href="http://localhost:8080/"'>Home</a>
+            <a class="btn_ref" onClick='location.href="http://localhost:8080/profile"'>Profile activity</a>
+        </div>
+        {{end}}
+    </div>
+    <div class="container_chosenc">
+        <div class="chosenc">Chosen category
+            #{{ .Category }}
+        </div>
+    </div> 
+    {{ range .Posts }}
+    <form action="/filter" method="post">
+    <div class="container">
+        <br>
+        <div class="author">Author {{ .Author }}</div> 
+        <a onClick='location.href="http://localhost:8080/post/{{.ID }}"'>
+            <div class="title_ref">{{ .Title }}</div>
+        </a>
+        <div class="text">{{ .Text }}
+        <div class="tags">
+            {{range .Tags}}
+            <button class="tags_btn" type="submit" name="filter" value ={{.}}>
+                <a class="tags_ref">#{{.}}</a>
+            </button>
+            {{end}}
+        </div> 
+        </div>
+    </div>
+    {{ end }}
+    </form>
+</body>
+</html>

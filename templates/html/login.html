@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+    <link rel="shortcut icon" href="#">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>Login</title>
+</head>
+<body>
+        <div class="title">Sign in</div>
+        <br>
+        <form action="postlogin" method="POST">
+            <div class="container">
+                <label for="uname"><b>Email</b></label>
+                <input class="input_data" type="text" placeholder="Enter email" name="login" required>
+                <label for="psw"><b>Password</b></label>
+                <input class="input_data" type="text" placeholder="Enter password" name="password" required>
+                <div class="text">
+                    {{ if eq .Err true }}
+                    {{ .MSG }}
+                    {{ end }}
+                </div>
+            </div>
+            <div class="btn_container" style="background-color:#f1f1f1">
+                <button class="btn" type="submit">Login</button>
+                <input class="btn" type="button" value="Home" onClick='location.href="http://localhost:8080/"'>
+                <input class="btn" type="button" value="Login with Github" onClick='location.href="http://localhost:8080/login/github"'>
+                <input class="btn" type="button" value="Login with Google" onClick='location.href="http://localhost:8080/login/google"'>
+            </div>
+        </form>
+</body>
+</html>

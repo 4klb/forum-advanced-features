@@ -1,0 +1,112 @@
+.title {
+    text-align: center;
+    font-size: 30px;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+.container {
+    padding: 16px;
+}
+   
+.input_data {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.text {
+    margin: 0 auto;
+    margin-left: 50px;
+    color: rgb(206, 206, 206);  
+}
+
+.btn_container {
+    padding: 16px;
+    text-align: center;
+}
+
+.btn {
+    font-family: 'Lobster', cursive;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    color:rgb(27, 22, 18);
+    border: 1px solid #fff;
+    height: 34px;
+    width: 170px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 10px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    color:rgb(190, 141, 106);
+}
+
+.btn:hover:after {
+    display: block;
+    opacity: 1;
+} 
+ 
+
+@media (max-width: 700px) {
+    .title {
+        text-align: center;
+        font-size: 10px;
+    }
+    
+    form {
+        border: 3px solid #f1f1f1;
+        font-size: 10px;
+    }
+    
+    .container {
+        padding: 16px;
+        font-size: 10px;
+    }
+       
+    .input_data {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-size: 10px;
+    }
+    
+    .text {
+        margin: 0 auto;
+        margin-left: 50px;
+        color: rgb(206, 206, 206); 
+        font-size: 10px; 
+    }
+    
+    .btn_container {
+        padding: 16px;
+        text-align: center;
+        font-size: 10px;
+    }
+    
+    .btn {
+        font-family: 'Lobster', cursive;
+        margin-top: 20px;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.3);
+        color:rgb(27, 22, 18);
+        border: 1px solid #fff;
+        height: 34px;
+        width: 170px;
+        font-size: 10px;
+        border-radius: 5px;
+        padding-left: 10px;
+        transition: 0.5s;
+    }
+}

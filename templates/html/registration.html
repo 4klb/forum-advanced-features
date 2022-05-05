@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/registration.css">
+    <link rel="shortcut icon" href="#">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>Registration</title>
+</head>
+<body>
+        <div class="title">Sign up</div>
+        <br>
+        <form action="postregistration" method="POST">
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input class="input_data" type="text" placeholder="Enter username" name="name" required>
+                <label for="ulogin"><b>Email</b></label>
+                <input class="input_data" type="text" placeholder="Enter email" name="login" required>
+                <label for="psw"><b>Password</b></label>
+                <input class="input_data" type="text" placeholder="Enter password" name="password" required>
+                <label for="psw"><b>Password confirmation</b></label>
+                <input class="input_data" type="text" placeholder="Enter password confirmation" name="passwordconfirm" required>
+                <div class="text">
+                    {{ if eq .Err true }}
+                    {{ .MSG }}
+                    {{ end }}
+                </div>
+            </div>
+            <div class="btn_container" style="background-color:#f1f1f1">
+                    <button class="btn" type="submit">Sing up</button>
+                    <input class="btn" type="button" value="Sign in" onClick='location.href="http://localhost:8080/login"'>
+                    <input class="btn" type="button" value="Home" onClick='location.href="http://localhost:8080/"'>
+            </div>
+        </form>
+</body>
+</html>

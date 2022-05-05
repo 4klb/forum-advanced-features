@@ -1,0 +1,28 @@
+.err {
+    font-size: 20px;
+    text-align: center;
+}
+
+.btn {
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    color:rgb(27, 22, 18);
+    border: 1px solid #fff;
+    height: 34px;
+    width: 60px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    color:rgb(190, 141, 106);
+}
+
+.btn:hover:after {
+    display: block;
+    opacity: 1;
+} 

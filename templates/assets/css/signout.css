@@ -1,0 +1,36 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn_container {
+    padding: 16px;
+    text-align: center;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+.btn {
+    font-family: 'Lobster', cursive;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    color:rgb(27, 22, 18);
+    border: 1px solid #fff;
+    height: 34px;
+    width: 170px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 10px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    color:rgb(190, 141, 106);
+}
+
+.btn:hover:after {
+    display: block;
+    opacity: 1;
+} 

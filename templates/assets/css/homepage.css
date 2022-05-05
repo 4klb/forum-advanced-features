@@ -1,0 +1,435 @@
+body {
+    background-color: rgb(226, 229, 229);
+    min-height: 100vh;
+}
+
+.union {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.post_container {
+    width: 800px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.filter_container {
+    width: 800px;
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    background-color: white;
+    text-align: center;
+    margin-top: 30px;
+    height: 100px;
+}
+
+.filter_container_2 {
+    width: 800px;
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    background-color: white;
+    text-align: left;
+    margin-top: 30px;
+    height: 100px;
+    overflow: scroll;
+}
+
+.filter_title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.notification_title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn_container {
+    background-color: rgb(65, 77, 83);
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    color: #ccc;
+    width: -moz-available;
+}
+
+.author {
+    margin-left: 50px;
+    font-size: 16px;
+    color: rgb(168, 166, 166);
+}
+
+.title_ref {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 50px;
+    font-size: 30px;
+    color: rgb(134, 132, 132);
+    cursor: pointer;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title_ref:hover {
+    color:rgb(190, 141, 106);
+}
+
+.title_ref:hover:after {
+    display: block;
+    opacity: 1;
+}
+
+.tags_ref {
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+    color:rgb(27, 22, 18);
+    border: 0px solid #fff;
+    height: 34px;
+    width: 80px;
+    font-size: 16px;
+    color: rgb(168, 166, 166);
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tags_ref:hover {
+    color: rgb(105, 101, 101);
+}
+
+.tags_btn {
+    border: 0px solid #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tags_btn:hover {
+    color:rgb(190, 141, 106);
+}
+
+.tags_btn:hover:after {
+    display: block;
+    opacity: 1;
+}
+
+.text {
+    font-size: 16px;
+    margin-left: 50px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    background-color: white;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn_ref {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.btn_ref:hover {
+    color:rgb(190, 141, 106);
+}
+
+.btn_ref:hover:after {
+    display: block;
+    opacity: 1;
+}
+
+.bottom_Page {
+    border: 1px solid #ccc;
+    background-color: rgb(65, 77, 83);
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    color: #ccc;
+    height: 40px;
+    
+    width: -moz-available;
+    margin-top: auto;
+}
+
+.bottom_Page_btn_ref {
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.bottom_Page_btn_ref:hover {
+    color:rgb(190, 141, 106);
+}
+
+.bottom_Page_btn_ref:hover:after {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 1700px) {/*font 20*/
+    .filter_container {
+        width: 500px;
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        text-align: center;
+        margin-top: 20px;
+        height: 100px;
+        font-size: 20px;
+    } 
+
+    .filter_container_2 {
+        width: 500px;
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        text-align: left;
+        margin-top: 20px;
+        height: 100px;
+        font-size: 16px;
+        overflow: scroll;
+    } 
+
+    .notification_title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .post_container {
+        width: 500px;
+        font-family: 'Lobster', cursive; 
+    }
+
+    .author {
+        color: rgb(168, 166, 166);
+        font-size: 20px;
+    }
+
+    .title_ref {
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(134, 132, 132);
+        cursor: pointer;
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        font-size: 20px;
+    }
+
+    .tags_ref {
+        font-family: 'Montnotification_titlerrat', sans-serif;
+        cursor: pointer;
+        background-color: notification_titleba(255, 255, 255, 0.3);
+        color:rgb(27, 22, 18);
+        border: 0px solid #fff;
+        height: 34px;
+        width: 80px;
+        color: rgb(168, 166, 166);
+        
+    }
+
+    .text {
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 20px;
+    }
+
+    .btn_ref {
+        cursor: pointer;
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 1099px) {/*font 15*/
+    .union {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .filter_container {
+        width: 600px;
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        text-align: center;
+        margin-top: 20px;
+        height: 100px;
+        font-size: 15px;
+    } 
+
+    .filter_container_2 {
+        width: 600px;
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        text-align: left;
+        margin-top: 20px;
+        height: 100px;
+        font-size: 15px;
+        overflow: scroll;
+    }
+
+    .notification_title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .post_container {
+        width: 600px;
+        font-family: 'Lobster', cursive; 
+    }
+
+    .author {
+        color: rgb(168, 166, 166);
+        font-size: 15px;
+        margin-left: 0px;
+    }
+
+    .title_ref {
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(134, 132, 132);
+        cursor: pointer;
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        font-size: 15px;
+        margin-left: 0px;
+    }
+
+    .tags_ref {
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.3);
+        color:rgb(27, 22, 18);
+        border: 0px solid #fff;
+        height: 34px;
+        width: 80px;
+        color: rgb(168, 166, 166);
+        font-size: 15px;
+    }
+
+    .text {
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 15px;
+        margin-left: 0px;
+    }
+
+    .btn_ref {
+        cursor: pointer;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) { /*font 10*/
+    .union {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .filter_container {
+        width: 350px;
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        text-align: center;
+        margin-top: 20px;
+        height: 100px;
+        font-size: 10px;
+    } 
+
+    .filter_container_2 {
+        width: 350px;
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        text-align: left;
+        margin-top: 20px;
+        height: 100px;
+        font-size: 10px;
+        overflow: scroll;
+    }
+
+    .notification_title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .post_container {
+        width: 400px;
+        font-family: 'Lobster', cursive; 
+    }
+
+    .author {
+        color: rgb(168, 166, 166);
+        font-size: 10px;
+    }
+
+    .title_ref {
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(134, 132, 132);
+        font-size: 10px;
+        cursor: pointer; 
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .tags_ref {
+        font-family: 'Montserrat', sans-serif;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.3);
+        color:rgb(250, 116, 7);
+        border: 0px solid #fff;
+        height: 34px;
+        width: 80px;
+        color: rgb(168, 166, 166);
+        font-size: 10px;
+    }
+
+    .text {
+        padding: 16px;
+        border: 1px solid #ccc;
+        background-color: white;
+        font-size: 10px;
+        cursor: pointer; 
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .btn_ref {
+        cursor: pointer;
+        font-size: 10px;
+    }
+}  

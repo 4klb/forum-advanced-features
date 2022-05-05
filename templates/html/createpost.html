@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/createpost.css">
+    <link rel="shortcut icon" href="#">
+    <title>Create Post</title>
+</head>
+<body>
+    <div class="title">Create post</div>
+    <form method="POST" action="postcreate" >
+        <div class="container">
+            <label for="ctitle"><b>Title</b></label>
+            <input class="input_data" type="text" placeholder="Enter title" name="title" required>
+            <label for="description"><b>Text</b></label>
+            <textarea class="input_data" type="text" placeholder="Enter text" name="description" required></textarea>
+            <div class="categories">
+                {{ range .Categories }}
+                <label >
+                    <input type="checkbox" name="categories" value="{{ . }}">{{ . }}
+                </label>
+                {{ end }}
+            </div>
+            <br> 
+            <div class="text">
+                    {{ if eq .ErrorVal.Err true }}
+                    {{ .ErrorVal.MSG }}
+                    {{ end }}
+            </div>
+            <div class="btn_container" style="background-color:#f1f1f1">
+                <button class="btn" type="submit">Create</button>
+                <!-- <input class="btn" type="button" value="Sign in" onClick='location.href="http://localhost:8080/login"'> -->
+                <input class="btn" type="button" value="Home" onClick='location.href="http://localhost:8080/"'>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

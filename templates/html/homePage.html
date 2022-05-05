@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">  -->
+    <title>Home page</title>
+</head>
+<body>
+    <div class="btn_container">
+        {{ if eq .InSession  false }}
+        <div class="header">
+            <a class="btn_ref" onClick='location.href="http://localhost:8080/registration"'>Sign up</a>
+            <a class="btn_ref" onClick='location.href="http://localhost:8080/login"'>Sign in</a>
+        </div>
+        {{else}}
+        <div class="header">
+            <a class="btn_ref" onClick='location.href="http://localhost:8080/profile"'>Profile activity</a>
+            <a class="btn_ref" onClick='location.href="http://localhost:8080/createpost"'>Create post</a>
+            <a class="btn_ref" onClick='location.href="http://localhost:8080/signout"'>Sign out</a>  
+        </div>
+        {{end}}
+    </div>
+    <div class="union">
+        <form action="/filter" method="post">
+            {{ range .Posts }}
+            <div class="post_container">
+                <br>
+                <div class="author">Author {{ .Author }}</div> 
+                <a onClick='location.href="http://localhost:8080/post/{{.ID }}"'>
+                    <div class="title_ref">Title: {{ .Title }}</div> 
+                </a>
+                <div class="text">{{ .Text }}
+                    <div class="tags">
+                        {{range .Tags}}
+                        <button class="tags_btn" type="submit" name="filter" value ={{.}}>
+                            <a class="tags_ref">#{{.}}</a>
+                        </button>
+                        {{end}}
+                    </div> 
+                </div>
+            </div>
+            {{ end }}
+        </form>
+        <form action="/filter" method="post">
+            {{ if eq .InSession  true }}
+            {{ if eq .IsNotification true }}
+            <div class="notification_title">New notifications ({{ .CountOfNotifications }}) </div>
+            <div class="filter_container_2"> 
+                <div class="">
+                    {{ range .LikedPostNotification }}
+                    Your post "{{ .Post.Title }}" was liked by {{ .Liker.Name }}
+                    <br>
+                    {{ end }}
+                </div>
+                <div class="">
+                    {{ range .DislikedPostNotification }}
+                    Your post "{{ .Post.Title }}" was disliked by {{ .Liker.Name }}
+                    <br>
+                    {{ end }}
+                </div>
+                <div class="">
+                    {{ range .CommentNotification }}
+                    Your post "{{ .Post.Title }}" was commented by {{ .Commentator.Name }}
+                    <br>
+                    {{ end }}
+                </div>
+                <br>
+            </div> 
+            {{end}}
+            {{end}}
+            <div class="filter_container">
+                <div class="filter_title">Filter</div>
+                {{ range .Categories}}
+                <button class="tags_btn" type="submit" name="filter" value ={{.}}>
+                    <a class="tags_ref">#{{.}}</a>
+                </button>
+                {{end}}
+            </div>
+            <br>
+            
+        </form>
+    </div>
+    <div class="bottom_Page">
+        <a class="bottom_Page_btn_ref" onClick='location.href="https://github.com/"'>GitHub</a>
+        <a class="bottom_Page_btn_ref" onClick='location.href="https://01.alem.school/intra"'>Alem school</a>
+    </div>
+</body>
+</html>

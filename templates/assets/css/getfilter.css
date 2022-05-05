@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(226, 229, 229);
+}
+
+.btn_container {
+    background-color: rgb(65, 77, 83);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.btn_ref {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.btn_ref:hover {
+    color:rgb(190, 141, 106);
+}
+
+.btn_ref:hover:after {
+    display: block;
+    opacity: 1;
+}
+
+.btn_tag {
+    background-color: rgb(226, 229, 229);
+    border: 0px solid rgb(226, 229, 229);
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(168, 166, 166);
+}
+
+.btn_tag:hover {
+    color:rgb(105, 101, 101);
+}
+
+.btn_tag:hover:after {
+    display: block;
+    opacity: 1;
+}
+
+.btn_tag_container {
+    margin: 0 auto;
+    text-align: center;
+}
+
