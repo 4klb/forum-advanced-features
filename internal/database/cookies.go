@@ -54,9 +54,9 @@ func GetUserFromDB(db *sql.DB, cookie *http.Cookie) (forum.User, error) {
 		return user, err
 	}
 
-	if err := row.Err(); err != nil {
-		return user, err
-	}
+	// if err := row.Err(); err != nil {
+	// 	return user, err
+	// }
 
 	return user, nil
 }
@@ -120,10 +120,10 @@ func IsUserAuthorOfPost(db *sql.DB, postid int, user forum.User) bool {
 		return false
 	}
 
-	if err := row.Err(); err != nil {
-		log.Println(err)
-		return false
-	}
+	// if err := row.Err(); err != nil {
+	// 	log.Println(err)
+	// 	return false
+	// }
 
 	if title == "" {
 		return false

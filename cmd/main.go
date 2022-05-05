@@ -67,18 +67,3 @@ func main() {
 	log.Println("Server is Listening..." + "\n" + "http://localhost:8080/")
 	log.Fatal(http.ListenAndServe(":8080", mux))
 }
-
-/*
-SELECT UserNotificationsHistory.id, p.Title, c.Comment,
-		CASE
-		WHEN VisitedNotificationsPostId IS NOT NULL
-		THEN VisitedNotificationsPostId
-		ELSE VisitedNotificationsCommentId
-		END
-		FROM UserNotificationsHistory
-		LEFT JOIN VisitedNotificationsPost ON VisitedNotificationsPostId = VisitedNotificationsPost.id
-		LEFT JOIN VisitedNotificationsComment ON VisitedNotificationsCommentId = VisitedNotificationsComment.id
-        LEFT JOIN PostRaiting ON PostRaitingId = PostRaiting.id
-        LEFT JOIN Post p ON PostRaiting.PostId = p.id
-        LEFT JOIN Comments c ON CommentsId = c.id
-*/
